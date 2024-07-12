@@ -2,3 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+.underlineAnimation{
+    position: relative;
+}
+.underlineAnimation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: -4px;
+    background-color: black;
+    transform: scaleX(0%);
+    transform-origin: bottom right;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+.underlineAnimation::after:hover{
+    transform: scaleX(100%);
+    transform-origin: bottom left;
+}
+
+
+*{
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+.description::-webkit-scrollbar{
+    display: none;
+}
