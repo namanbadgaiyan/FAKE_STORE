@@ -22,8 +22,11 @@ const Body = () => {
 ;
 
     useEffect(() => {
-        if(!catViseProduct){setcatViseProduct(products)}
-        if(category != "undefined"){getProductCategory()}
+        if(!catViseProduct || category=='undefined'){setcatViseProduct(products)}
+        if(category != "undefined"){
+            // getProductCategory()
+            setcatViseProduct(products.filter((p)=> p.category == category))
+        }
     }, [category , products])
     
 
