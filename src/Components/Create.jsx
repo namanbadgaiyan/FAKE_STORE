@@ -74,7 +74,7 @@ const Create = () => {
                 value={description}
             />
             <div className="w-1/2 mt-5">
-                <button className="px-4 py-2 font-semibold text-blue-400 capitalize border border-blue-400" href="/create">Add new product</button>
+                <button className="px-4 py-2 font-semibold text-blue-400 capitalize border border-blue-400">Add new product</button>
             </div>
             
         </form>
